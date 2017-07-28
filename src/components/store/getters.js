@@ -4,6 +4,8 @@ export default {
   },
   isShowWarnx(state){
     return state.isShowWarn;
+  },
+  getdatas(state){
+    return state.data;
   }
-
 }

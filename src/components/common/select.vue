@@ -9,7 +9,7 @@
         <div class="selectS"></div>
       </div>
     </div>
-
+  {{getdatas}}
   </div>
 
 
@@ -23,11 +23,11 @@
     export default{
         data(){
           return {
-            tankuangtext:"xxxxxxxx"
+            tankuangtext:"s"
           }
         },
         computed:{
-          ...mapGetters([])
+          ...mapGetters(['getdatas'])
         },
         methods:{
 //          tankuang(){
@@ -40,7 +40,7 @@
 //          },
 
           tankuang:()=>{
-            new IosSelect(1, [[{"id":"1","value":"我是人工智能"}]], {
+            new IosSelect(1, [getdatas], {
               callback: function(selectOneObj) {
                   alert(selectOneObj.value);
                   console.log(this)

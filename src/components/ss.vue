@@ -50,10 +50,19 @@
 </template>
 <script>
    import selectT from './common/select.vue'
+   import {mapGetters,mapActions} from 'vuex'
   export default{
       components:{
         selectT
-      }
+      },
+
+    mounted(){
+      this.setData("借款期限");
+      this.setData("还款方式");
+    },
+    methods:{
+      ...mapActions(['setData']),
+    }
   }
 
 
